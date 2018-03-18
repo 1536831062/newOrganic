@@ -1,0 +1,88 @@
+@import "variables";
+@import "common";
+
+//account
+.account {
+  padding: 50px 0;
+}
+.account-container {
+  @extend %align-start;
+  @extend %flex;
+  @extend %space-between;
+}
+.account-panel {
+  @extend %border;
+  width: 20%;
+}
+.account-panel-item {
+  border-bottom: 1px dashed #e5e5e5;
+  padding: 20px 30px;
+  &:last-child {
+    border: none;
+  }
+  h2 {
+    @extend %cursor;
+    @extend %green;
+    i {
+      font-size: 30px;
+    }
+  }
+  ul {
+    padding-left: 40px;
+  }
+  li {
+    @extend %animation;
+    @extend %cursor;
+    @extend %font-size-14;
+    padding: 5px 0;
+    &:hover, &.active {
+      @extend %green;
+    }
+  }
+}
+.account-list {
+  width: 78%;
+}
+.account-list-item {
+  .location-card {
+    @extend %font-size-14;
+    width: 27%;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  & > ul {
+    & > li {
+      @extend %display-none;
+      padding: 5px 0;
+      &.active {
+        @extend %display-block;
+      }
+    }
+  }
+}
+#account-info{
+  ul{
+    padding-bottom:20px;
+  }
+  li{
+    padding:10px 0;
+    strong{
+      @extend %display-inline-block;
+      width:10%;
+    }
+  }
+}
+#charts {
+  li {
+    @extend %flex;
+    @extend %align-center;
+    flex-direction: column;
+  }
+}
+.charts-area, .charts-desc {
+  width: 80%;
+}
+.charts-desc {
+  padding: 30px;
+}

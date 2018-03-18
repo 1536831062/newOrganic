@@ -1,0 +1,116 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+header{
+	width: 100%;
+	top: 0;
+	left: 0;
+	padding: 40px 0;
+	position: absolute;
+    z-index: 2;
+	
+}
+body{
+	font-family:"微软雅黑";
+}
+a{
+	text-decoration: none;
+	color: #525252;
+	font-weight: bold;
+}
+header .wrap{
+	width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+}
+
+.logo a{
+	font-size: 30px;
+	position: relative;
+}
+.logo a img {
+    position: absolute;
+    top: -28px;
+    left: 44%;
+    transform: translateX(5px) rotate(-30deg);
+    -webkit-transform:  translateX(5px) rotate(-30deg);
+}
+.nav a{
+	padding: 14px;
+	font-size: 17px;
+}
+.container-fluid{
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+	
+	align-items: flex-start;
+	-webkit-align-items: flex-start;
+	width: 100%;
+	height: 800px;
+	overflow: hidden;
+}
+.carousel-indicators li {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: rgba(127, 186, 0, 0.69);
+    border-radius: 10px;
+    border: none;
+}
+.carousel-indicators .active {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    background-color: #82b515;
+    border: none;
+}
+.all{
+	width: 100%;
+	height: 700px;
+	position: relative;
+	display: flex;
+	display: -webkit-flex;
+}
+.all .top{
+    width: 100%;
+    height: 73px;
+    background: url(../img/white-pattern.png) no-repeat center;
+    position: absolute;
+    top: -73px;
+    left: 0;
+}
+.carousel-indicators {
+    bottom: 100px;
+}
+.all .wrap{
+	width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+}
+.all .all_title{
+	display: flex;
+	display: -webkit-flex;
+	font-size: 17px;
+	align-items: center;
+	
+}
+.all .all_title a{
+	flex-grow: 1;
+}
+
+.all .wrap img{
+	display: compact;
+}
+
+
+
+
+

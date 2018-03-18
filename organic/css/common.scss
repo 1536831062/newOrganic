@@ -1,0 +1,670 @@
+
+/*reset the initial style of some elements*/
+body, p, ul {
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 10px 0;
+}
+p {
+  line-height: 1.7;
+}
+body, a {
+  color: #525252;
+}
+a {
+  @extend %animation;
+  @extend %font-bold;
+  text-decoration: none;
+  &:hover, &.active {
+    @extend %green;
+  }
+}
+canvas{
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+ul {
+  list-style: none;
+}
+button, input, textarea {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  vertical-align: middle;
+}
+button {
+  @extend %cursor;
+}
+textarea {
+  resize: none;
+}
+small {
+  color: #9f9f9f;
+}
+
+/*define common style for reusing*/
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+//buttons
+.btn {
+  @extend %animation;
+  @extend %display-inline-block;
+  @extend %border-radius-20;
+  @extend %font-size-16;
+  @extend %font-bold;
+  @extend %text-center;
+  @extend %white;
+  min-width: 100px;
+  padding: 10px 20px;
+}
+.btn-cyan {
+  @extend %bg-cyan;
+}
+.btn-green {
+  @extend %bg-green;
+  &:hover{
+    @extend %bg-dark;
+    @extend %white;
+  }
+}
+.btn-blue {
+  @extend %bg-blue;
+}
+.btn-white {
+  @extend %bg-white;
+  color:#525252;
+  border: solid 2px #d8d8d7;
+  &:hover, &.active {
+    @extend %bg-green;
+    @extend %white;
+    border-color: #7fba00;
+  }
+}
+.controls {
+  @extend %font-size-0;
+}
+.prev {
+  border-radius: 20px 0 0 20px;
+}
+.next {
+  border-radius: 0 20px 20px 0;
+}
+.prev, .next {
+  @extend %animation;
+  @extend %bg-white;
+  @extend %cursor;
+  padding: 5px 10px;
+  border: solid 1px #9f9f9f;
+  &:hover {
+    @extend %white;
+    @extend %bg-cyan;
+  }
+}
+
+//icons
+.iconfont{
+  color:#989898;
+}
+.icon-star{
+  &.active{
+    color:#f6cc28;
+  }
+}
+.icon-up {
+  font-size: 24px;
+}
+.icon-box-checked {
+  @extend %green;
+}
+.toTop {
+  @extend %animation;
+  @extend %position-fixed;
+  bottom: 15%;
+  right: 5%;
+  z-index: 10;
+}
+
+//tools
+.divider {
+  @extend %bg-green;
+  width: 30px;
+  height: 2px;
+  margin: 25px 0;
+}
+.divider-dashed {
+  width: 100%;
+  margin: 10px auto;
+  border: dashed 1px #e9e9e9;
+}
+.operation {
+  @extend %font-size-0;
+  a {
+    @extend %bg-white;
+    @extend %font-size-20;
+    padding: 10px 20px;
+    &:first-child {
+      border-radius: 20px 0 0 20px;;
+    }
+    &:last-child {
+      border-radius: 0 20px 20px 0;
+    }
+    &:hover {
+      @extend %bg-blue;
+      @extend %white;
+      &:first-child, &:last-child {
+        @extend %bg-cyan;
+      }
+    }
+  }
+  .icon-like{
+    &.active{
+      color: #e00013;
+    }
+  }
+  .icon-basket{
+    &.active{
+      @extend %green;
+    }
+  }
+}
+.pattern {
+  @extend %align-center;
+  @extend %background-cover;
+  @extend %flex;
+  @extend %justify-center;
+  @extend %position-relative;
+  width: 100%;
+  height: 72px;
+  margin-top: -45px;
+  background: url("../img/white-pattern.png") no-repeat center;
+  z-index: 10;
+}
+.pattern-small {
+  @extend %background-cover;
+  width: 100%;
+  height: 59px;
+  margin-top: -20px;
+  background: url("../img/shap-small.png") no-repeat center;
+}
+.price {
+  del {
+    color: #dddddd;
+    margin-left: 3px;
+  }
+}
+.price-current {
+  @extend %green;
+}
+.round {
+  padding: 5px 30px 8px;
+  border-radius: 50px;
+}
+.slider-bar {
+  @extend %font-size-0;
+  li {
+    @extend %cursor;
+    @extend %display-inline-block;
+    width: 50px;
+    height: 8px;
+    background-color: #f7f6f2;
+    margin-left: 1px;
+    @extend %animation;
+    &:first-child {
+      border-radius: 5px 0 0 5px;
+    }
+    &:last-child {
+      border-radius: 0 5px 5px 0;
+    }
+    &:hover, &.active {
+      background-color: #92d2a7;
+    }
+  }
+}
+.tag {
+  @extend %border-radius-20;
+  @extend %font-size-12;
+  @extend %font-bold;
+  @extend %white;
+  padding: 3px 20px;
+  margin: 0 2px;
+}
+.tag-new {
+  @extend %bg-cyan;
+}
+.tag-sale {
+  @extend %bg-blue;
+}
+.tip{
+  @extend %error;
+  @extend %font-size-14;
+}
+
+//animation
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-25px);
+    -moz-transform: translateY(-25px);
+    -ms-transform: translateY(-25px);
+    -o-transform: translateY(-25px);
+    transform: translateY(-25px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+//header
+header {
+  @extend %background-transparent;
+  @extend %position-relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  &.absolute{
+    @extend %position-absolute;
+  }
+  &.fixed{
+    @extend %bg-white;
+    @extend %box-shadow-20;
+    @extend %position-fixed;
+    top:0;
+    left:0;
+    .header-inner{
+      padding: 25px 0;
+    }
+  }
+}
+.header-inner {
+  @extend %animation;
+  @extend %align-center;
+  @extend %flex;
+  @extend %space-between;
+  padding: 40px 0;
+}
+.logo {
+  text-transform: uppercase;
+  a {
+    @extend %position-relative;
+    font-size: 30px;
+    img {
+      @extend %position-absolute;
+      top: -30px;
+      left: 48%;
+      -webkit-transform: translateX(-5px) rotate(-30deg);
+      -moz-transform: translateX(-5px) rotate(-30deg);
+      -ms-transform: translateX(-5px) rotate(-30deg);
+      -o-transform: translateX(-5px) rotate(-30deg);
+      transform: translateX(-5px) rotate(-30deg);
+    }
+  }
+}
+.nav{
+  @extend %align-center;
+  @extend %flex;
+  @extend %space-between;
+  &>li{
+   & > a {
+     @extend %animation;
+     background: url("../img/slide-txt-bg-1.png") no-repeat 0 120%;
+     background-size: 100% 5px;
+     padding:15px;
+     &:hover, &.active {
+       background-position: bottom;
+     }
+   }
+    .icon-cart{
+      @extend %font-size-20;
+    }
+    .icon-collapse{
+      @extend %background-transparent;
+    }
+  }
+  .mycart{
+    @extend %position-relative;
+    &:hover{
+     .mycart-popup{
+        @extend %display-block;
+       @extend %opacity-1;
+      }
+    }
+  }
+  .badge{
+    @extend %border-radius-50;
+    @extend %position-absolute;
+    @extend %display-inline-block;
+    @extend %font-size-12;
+    @extend %white;
+    top:-8px;
+    right:4px;
+    padding:5px;
+    width:8px;
+    height:8px;
+    line-height: 10px;
+    background-color: #f17f6e;
+  }
+}
+.mycart-popup {
+  @extend %animation;
+  @extend %bg-white;
+  @extend %border-radius-10;
+  @extend %box-shadow-30;
+  @extend %display-none;
+  @extend %opacity-0;
+  @extend %position-absolute;
+  top:70%;
+  right: -50%;
+  width: 300px;
+  margin-top: 23px;
+  padding: 0 15px;
+  z-index: 11;
+  li {
+    @extend %flex;
+    @extend %flex-start;
+    @extend %position-relative;
+    padding: 15px 0;
+    border-bottom: solid 1px #eeeeee;
+    &:last-child {
+      border: none;
+    }
+    img {
+      margin-right: 15px;
+    }
+    i {
+      @extend %cursor;
+      @extend %font-size-20;
+      @extend %position-absolute;
+      top: 15%;
+      right: 5%;
+    }
+  }
+  .subtotal, .btns {
+    @extend %flex;
+    @extend %space-between;
+  }
+  .btn {
+    @extend %white;
+  }
+}
+.mycart-desc {
+  h4{
+    margin:5px 0;
+  }
+}
+.gallery-container {
+  @extend %bg-white;
+  @extend %border-radius-10;
+  @extend %box-shadow-30;
+  @extend %display-none;
+  @extend %opacity-0;
+  @extend %overflow-hidden;
+  @extend %position-absolute;
+  top: 90%;
+  left: 2%;
+  right: 2%;
+  ul {
+    margin-bottom: 20px;
+  }
+  li {
+    line-height: 1.7;
+  }
+  a {
+    @extend %font-size-14;
+  }
+  .icon-close {
+    @extend %animation;
+    @extend %cursor;
+    @extend %font-size-20;
+    @extend %position-absolute;
+    top: 3%;
+    right: 1%;
+  }
+  &.active{
+    @extend %display-block;
+    @extend %opacity-1;
+  }
+}
+.gallery-wrap {
+  @extend %flex;
+  @extend %flex-start;
+  @extend %align-start;
+  width: 150%;
+}
+.gallery-item {
+  width: 330px;
+  padding: 30px 20px 0;
+  a{
+    font-weight: normal;
+  }
+  &:nth-child(even) {
+    background-color: #f6f6f6;
+  }
+}
+.gallery-item-pic {
+  @extend %align-center;
+  @extend %flex;
+  @extend %position-relative;
+  flex-direction:column;
+  justify-content: flex-end;
+  margin-top: 20px;
+  height: 150px;
+}
+
+//footer
+.footer-inner {
+  @extend %bg-gray;
+  @extend %pd-both;
+}
+.footer-wrap {
+  @extend %flex;
+  @extend %space-between;
+  @extend %align-start;
+}
+.footer-item {
+  width: 25%;
+  padding: 0 15px;
+  h3 {
+    @extend %font-size-18;
+  }
+  p {
+    @extend %font-size-14;
+    margin-bottom: 15px;
+  }
+  li {
+    @extend %font-size-14;
+    padding: 5px 0;
+    a{
+      font-weight: normal;
+    }
+  }
+}
+.footer-item-pic {
+  a {
+    @extend %display-inline-block;
+    margin-bottom: 1px;
+  }
+}
+
+//copyright
+.copyright {
+  @extend %font-size-14;
+  padding: 10px 0 30px;
+  a {
+    @extend %font-size-20;
+    padding: 0 4px;
+  }
+}
+.copyright-content {
+  @extend %flex;
+  @extend %space-between;
+  @extend %align-center;
+}
+
+/*assembly*/
+//hero
+.hero {
+  @extend %background-transparent;
+  @extend %pd-both;
+  background: url("../img/breadcrumb-1.jpg") no-repeat center;
+}
+
+//cart count-control
+.count-control {
+  @extend %border-radius-50;
+  @extend %font-size-0;
+  @extend %text-center;
+  padding: 5px 10px;
+  border: solid 1px #e9e9e9;
+  .icon-add, .icon-subtract {
+    @extend %font-size-20;
+  }
+  .count {
+    @extend %font-size-16;
+    @extend %text-center;
+    padding: 0 3px;
+    width: 40px;
+  }
+}
+
+//product card
+.product-card {
+  @extend %animation;
+  @extend %bg-white;
+  @extend %border-radius-10;
+  @extend %overflow-hidden;
+  @extend %position-relative;
+  @extend %text-center;
+  &>a{
+    @extend %display-block;
+  }
+  .operation {
+    @extend %animation;
+    @extend %opacity-0;
+    @extend %position-absolute;
+    top: 4%;
+    right: 2%;
+  }
+  &:after {
+    @extend %animation;
+    @extend %bg-green;
+    @extend %display-inline-block;
+    @extend %opacity-0;
+    content: "";
+    width: 60px;
+    height: 3px;
+    margin-bottom: -4px;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  &:hover {
+    @extend %box-shadow-20;
+    &:after {
+      @extend %opacity-1;
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      -o-transform: translateX(0);
+      transform: translateX(0);
+    }
+    .operation {
+      @extend %white;
+      top: 10%;
+      opacity: .8;
+    }
+  }
+}
+.product-card-pic {
+  @extend %flex;
+  @extend %justify-center;
+  align-items: flex-end;
+  height: 330px;
+  background: url("../img/shap-small.png") no-repeat bottom;
+  background-size: 100% auto;
+  background-color: #f7f6f2;
+}
+.product-card-desc {
+  @extend %bg-white;
+  padding: 10px 0 30px;
+  h3 {
+    padding: 10px 0;
+  }
+}
+.operation{
+  a{
+    &:hover{
+      @extend %white;
+    }
+  }
+}
+
+//location
+.location {
+  @extend %flex;
+  @extend %flex-start;
+  @extend %flex-wrap;
+  li {
+    padding: 5px 0;
+  }
+}
+.location-card {
+  @extend %border;
+  @extend %border-radius-5;
+  @extend %cursor;
+  @extend %position-relative;
+  margin: 0 13px 13px 0;
+  padding: 20px;
+  li{
+    @extend %font-size-14;
+    padding:5px 0;
+  }
+  &:hover {
+    .location-card-tool {
+      @extend %opacity-1;
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
+}
+.location-card-tool {
+  @extend %animation;
+  @extend %border;
+  @extend %border-radius-20;
+  @extend %display-inline-block;
+  @extend %font-size-0;
+  @extend %opacity-0;
+  @extend %position-absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  a {
+    padding: 0 4px;
+  }
+}

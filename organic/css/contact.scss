@@ -1,0 +1,67 @@
+@import "variables";
+@import "common";
+
+//contact
+.contact {
+  padding: 50px 0;
+}
+.contact-container {
+  @extend %align-start;
+  @extend %flex;
+  @extend %space-between;
+}
+.contact-map {
+  @extend %border-radius-10;
+  @extend %overflow-hidden;
+  width: 65%;
+  margin: 20px 0 60px;
+  border: 2px solid #7fba00;
+}
+#map {
+  height: 530px;
+}
+.contact-methods {
+  width: 30%;
+  li {
+    padding: 5px 0;
+    strong {
+      @extend %display-inline-block;
+      width: 32%;
+    }
+  }
+}
+.contact-email {
+  @extend %text-center;
+  padding:50px 0;
+
+  form {
+    @extend %align-center;
+    @extend %flex;
+    flex-direction: column;
+    input,textarea{
+      @extend %border;
+    }
+    input{
+      background-color: #fbfbfb;
+      border-radius: 25px;
+      padding:10px 20px;
+      margin:20px;
+      &.error{
+        border-color: #fb2e2e;
+      }
+    }
+    textarea{
+      @extend %border-radius-10;
+      width:60%;
+      margin-bottom:30px;
+      padding: 10px;
+      &.error{
+        border-color: #fb2e2e;
+      }
+    }
+  }
+}
+.contact-email-inputs {
+  @extend %flex;
+  @extend %justify-center;
+}

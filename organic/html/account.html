@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Organic-个人中心</title>
+    <link rel="icon" href="../img/logo/logo-2.png">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/account.css">
+    <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js?"></script>
+</head>
+<body>
+<!--header start-->
+<header>
+    <div class="wrap">
+        <div class="header-inner">
+            <div class="logo"><a href="index.html"><img src="../img/logo-icon.png" alt="LOGO">organic</a></div>
+            <ul class="nav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="detail.html">商品详情</a></li>
+                <li><a href="news.html">新闻</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+                <li><a href="sign.html">登录/注册</a></li>
+                <li><a class="active" href="account.html">个人中心</a></li>
+                <li class="mycart">
+                    <a class="iconfont icon-cart" href="cart.html"></a>
+                    <ul class="mycart-popup">
+                        <li>
+                            <img src="../img/cart/cart-sm-1.jpg" alt="干果">
+                            <div class="mycart-desc">
+                                <h4>杏仁</h4>
+                                <small>干果</small>
+                                <p class="price">
+                                    <strong class="price-current">$50.00</strong>
+                                    <del>$65.00</del>
+                                </p>
+                            </div>
+                            <i class="iconfont icon-close"></i>
+                        </li>
+                        <li>
+                            <img src="../img/cart/cart-sm-2.jpg" alt="干果">
+                            <div class="mycart-desc">
+                                <h4>甜椒</h4>
+                                <small>蔬菜</small>
+                                <p class="price">
+                                    <strong class="price-current">$50.00</strong>
+                                    <del>$65.00</del>
+                                </p>
+                            </div>
+                            <i class="iconfont icon-close"></i>
+                        </li>
+                        <li>
+                            <img src="../img/cart/cart-sm-3.jpg" alt="干果">
+                            <div class="mycart-desc">
+                                <h4>洋葱</h4>
+                                <small>蔬菜</small>
+                                <p class="price">
+                                    <strong class="price-current">$50.00</strong>
+                                    <del>$65.00</del>
+                                </p>
+                            </div>
+                            <i class="iconfont icon-close"></i>
+                        </li>
+                        <li class="subtotal">
+                            <strong>小计</strong>
+                            <strong class="price-current"></strong>
+                        </li>
+                        <li class="btns">
+                            <a class="btn btn-cyan" href="cart.html">详情</a>
+                            <a class="btn btn-blue" href="cart.html">结账</a></li>
+                    </ul>
+                    <span class="badge">3</span>
+                </li>
+                <li class="gallery">
+                    <a class="iconfont icon-collapse" href="javascript:void(0);"></a>
+                    <div class="gallery-container">
+                        <div class="gallery-wrap">
+                            <div class="gallery-item">
+                                <div class="gallery-item-desc">
+                                    <h3>鲜活水果</h3>
+                                    <div class="divider"></div>
+                                    <ul>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>香蕉</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>西瓜</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>黑莓</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>脐橙</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>柠檬</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>苹果</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>菠萝</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>猕猴桃</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>水蜜桃</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>葡萄</a>
+                                        </li>
+                                    </ul>
+                                    <a class="green" href=""><strong>查看所有水果</strong></a>
+                                </div>
+                                <div class="gallery-item-pic">
+                                    <img src="../img/extra/menu-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-item-desc">
+                                    <h3>新鲜蔬菜</h3>
+                                    <div class="divider"></div>
+                                    <ul>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>卷心菜</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>大蒜</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>洋葱</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>莴笋</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>胡萝卜</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>辣椒</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>蘑菇</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>马铃薯</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>玉米</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>大白菜</a>
+                                        </li>
+                                    </ul>
+                                    <a class="green" href=""><strong>查看所有蔬菜</strong></a>
+                                </div>
+                                <div class="gallery-item-pic">
+                                    <img src="../img/extra/menu-2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-item-desc">
+                                    <h3>营养果汁</h3>
+                                    <div class="divider"></div>
+                                    <ul>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>香蕉汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>西瓜汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>黑莓汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>橙汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>苹果汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>柠檬汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>菠萝汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>甘蔗汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>葡萄汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>水蜜桃</a>
+                                        </li>
+                                    </ul>
+                                    <a class="green" href=""><strong>查看所有营养果汁</strong></a>
+                                </div>
+                                <div class="gallery-item-pic">
+                                    <img src="../img/extra/menu-3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-item-desc">
+                                    <h3>鲜榨果汁</h3>
+                                    <div class="divider"></div>
+                                    <ul>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>香蕉汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>西瓜汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>黑莓汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>橙汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>苹果汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>柠檬汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>菠萝汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>甘蔗汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>葡萄汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>水蜜桃</a>
+                                        </li>
+                                    </ul>
+                                    <a class="green" href=""><strong>查看所有鲜榨果汁</strong></a>
+                                </div>
+                                <div class="gallery-item-pic">
+                                    <img src="../img/extra/menu-3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-item-desc">
+                                    <h3>新鲜面包</h3>
+                                    <div class="divider"></div>
+                                    <ul>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>香蕉派</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>西瓜甜圈</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>黑莓派</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>橙味面包</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>苹果派</a>
+                                        </li>
+                                        <li><a href=""><i
+                                                class="iconfont icon-right">&nbsp;</i>柠檬味牛角面包</a></li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>菠萝派</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>甘蔗面包</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>葡萄吐司</a>
+                                        </li>
+                                        <li><a href=""><i
+                                                class="iconfont icon-right">&nbsp;</i>水蜜桃味羊角面包</a></li>
+                                    </ul>
+                                    <a class="green" href=""><strong>查看所有新鲜面包</strong></a>
+                                </div>
+                                <div class="gallery-item-pic">
+                                    <img src="../img/extra/menu-5.png" alt="">
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-item-desc">
+                                    <h3>翠绿新茶</h3>
+                                    <div class="divider"></div>
+                                    <ul>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>香蕉派</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>西瓜甜圈</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>黑莓派</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>橙味面包</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>苹果派</a>
+                                        </li>
+                                        <li><a href=""><i
+                                                class="iconfont icon-right">&nbsp;</i>柠檬味牛角面包</a></li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>菠萝派</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>甘蔗面包</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>葡萄吐司</a>
+                                        </li>
+                                        <li><a href=""><i
+                                                class="iconfont icon-right">&nbsp;</i>水蜜桃味羊角面包</a></li>
+                                    </ul>
+                                    <a class="green" href=""><strong>查看所有翠绿新茶</strong></a>
+                                </div>
+                                <div class="gallery-item-pic">
+                                    <img src="../img/extra/menu-6.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <i class="iconfont icon-close"></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!--header end-->
+<!--hero start-->
+<div class="hero">
+    <div class="wrap">
+        <h2>个人中心</h2>
+    </div>
+</div>
+<!--hero end-->
+<!--account start-->
+<div class="account">
+    <div class="wrap">
+        <div class="account-container">
+            <div class="account-panel">
+                <div class="account-panel-item">
+                    <h2><i class="iconfont icon-01">.&nbsp;</i>我的账户</h2>
+                    <ul>
+                        <li><i class="iconfont icon-right">&nbsp;</i>编辑账户信息</li>
+                        <li><i class="iconfont icon-right">&nbsp;</i>修改账户密码</li>
+                        <li><i class="iconfont icon-right">&nbsp;</i>编辑收货地址簿</li>
+                    </ul>
+                </div>
+                <div class="account-panel-item">
+                    <h2><i class="iconfont icon-02">.&nbsp;</i>订单与评价</h2>
+                    <ul>
+                        <li><i class="iconfont icon-right">&nbsp;</i>查看历史订单</li>
+                        <li><i class="iconfont icon-right">&nbsp;</i>我的评价</li>
+                        <li><i class="iconfont icon-right">&nbsp;</i>查看退货申请</li>
+                    </ul>
+                </div>
+                <div class="account-panel-item">
+                    <h2><i class="iconfont icon-03">.&nbsp;</i>消费报表</h2>
+                    <ul>
+                        <li><i class="iconfont icon-right">&nbsp;</i>月度报表</li>
+                        <li class="active"><i class="iconfont icon-right">&nbsp;</i>年度报表</li>
+                    </ul>
+                </div>
+                <div class="account-panel-item">
+                    <h2><i class="iconfont icon-04">.&nbsp;</i>周报管理</h2>
+                    <ul>
+                        <li><i class="iconfont icon-right">&nbsp;</i>订阅周报</li>
+                        <li><i class="iconfont icon-right">&nbsp;</i>退订周报</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="account-list">
+                <div class="account-list-item ">
+                    <ul>
+                        <li id="account-info">
+                            <h3>账户信息</h3>
+                            <div class="divider"></div>
+                            <ul>
+                                <li><strong>用户名：</strong><span>尼古拉斯·有机体</span></li>
+                                <li><strong>真实姓名：</strong><span>尼古拉斯·奈特莉</span></li>
+                                <li><strong>性别：</strong><span>女</span></li>
+                                <li><strong>电子邮箱：</strong><span>Nikolas Knightley</span></li>
+                                <li><strong>手机号码：</strong><span>18666666666</span></li>
+                            </ul>
+                            <a class="btn btn-green" href="javascript:void(0);">编辑</a>
+                            <a class="btn btn-green" href="javascript:void(0);">保存</a>
+                        </li>
+                        <li>
+                            <h3>修改密码</h3>
+                            <div class="divider"></div>
+                        </li>
+                        <li><h3>地址簿</h3>
+                            <div class="divider"></div>
+                            <div class="location">
+                                <div class="location-card">
+                                    <ul>
+                                        <li><span>收货人：</span><span>菲尼克斯</span></li>
+                                        <li><span>所在地区：</span><span>有机省果蔬市果蔬大道</span></li>
+                                        <li><span>地址：</span><span>蘑菇街1668号</span></li>
+                                        <li><span>手机：</span><span>+86 66666666</span></li>
+                                        <li><span>邮箱：</span><span>fenix@gmail.com</span></li>
+                                    </ul>
+                                    <div class="location-card-tool">
+                                        <a href="javascript:void(0);" class="iconfont icon-box"></a>
+                                        <a href="javascript:void(0);" class="iconfont icon-edit"></a>
+                                        <a href="javascript:void(0);" class="iconfont icon-close"></a>
+                                    </div>
+                                </div>
+                                <div class="location-card">
+                                    <ul>
+                                        <li><span>收货人：</span><span>菲尼克斯</span></li>
+                                        <li><span>所在地区：</span><span>有机省果蔬市果蔬大道</span></li>
+                                        <li><span>地址：</span><span>蘑菇街1668号</span></li>
+                                        <li><span>手机：</span><span>+86 66666666</span></li>
+                                        <li><span>邮箱：</span><span>fenix@gmail.com</span></li>
+                                    </ul>
+                                    <div class="location-card-tool">
+                                        <a href="javascript:void(0);" class="iconfont icon-box"></a>
+                                        <a href="javascript:void(0);" class="iconfont icon-edit"></a>
+                                        <a href="javascript:void(0);" class="iconfont icon-close"></a>
+                                    </div>
+                                </div>
+                                <div class="location-card">
+                                    <ul>
+                                        <li><span>收货人：</span><span>菲尼克斯</span></li>
+                                        <li><span>所在地区：</span><span>有机省果蔬市果蔬大道</span></li>
+                                        <li><span>地址：</span><span>蘑菇街1668号</span></li>
+                                        <li><span>手机：</span><span>+86 66666666</span></li>
+                                        <li><span>邮箱：</span><span>fenix@gmail.com</span></li>
+                                    </ul>
+                                    <div class="location-card-tool">
+                                        <a href="javascript:void(0);" class="iconfont icon-box"></a>
+                                        <a href="javascript:void(0);" class="iconfont icon-edit"></a>
+                                        <a href="javascript:void(0);" class="iconfont icon-close"></a>
+                                    </div>
+                                </div>
+                                <div class="location-card">
+                                    <ul>
+                                        <li><span>收货人：</span><span>菲尼克斯</span></li>
+                                        <li><span>所在地区：</span><span>有机省果蔬市果蔬大道</span></li>
+                                        <li><span>地址：</span><span>蘑菇街1668号</span></li>
+                                        <li><span>手机：</span><span>+86 66666666</span></li>
+                                        <li><span>邮箱：</span><span>fenix@gmail.com</span></li>
+                                    </ul>
+                                    <div class="location-card-tool">
+                                        <a href="javascript:void(0);" class="iconfont icon-box"></a>
+                                        <a href="javascript:void(0);" class="iconfont icon-edit"></a>
+                                        <a href="javascript:void(0);" class="iconfont icon-close"></a>
+                                    </div>
+                                </div>
+                                <div class="location-card">
+                                    <ul>
+                                        <li><span>收货人：</span><span>菲尼克斯</span></li>
+                                        <li><span>所在地区：</span><span>有机省果蔬市果蔬大道</span></li>
+                                        <li><span>地址：</span><span>蘑菇街1668号</span></li>
+                                        <li><span>手机：</span><span>+86 66666666</span></li>
+                                        <li><span>邮箱：</span><span>fenix@gmail.com</span></li>
+                                    </ul>
+                                    <div class="location-card-tool">
+                                        <a href="javascript:void(0);" class="iconfont icon-box"></a>
+                                        <a href="javascript:void(0);" class="iconfont icon-edit"></a>
+                                        <a href="javascript:void(0);" class="iconfont icon-close"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="javascript:void(0);" class="btn btn-green">新增地址</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="account-list-item">
+                    <ul>
+                        <li><h3>历史订单</h3>
+                            <div class="divider"></div>
+                        </li>
+                        <li><h3>我的评价</h3>
+                            <div class="divider"></div>
+                        </li>
+                        <li><h3>退货申请</h3>
+                            <div class="divider"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="account-list-item">
+                    <ul>
+                        <li><h3>月度消费报表</h3>
+                            <div class="divider"></div>
+                        </li>
+                        <li class="active"><h3>年度消费报表</h3>
+                            <div class="divider"></div>
+                            <ul id="charts">
+                                <li>
+                                    <div class="charts-area">
+                                        <canvas id="consumption"></canvas>
+                                    </div>
+                                    <p class="charts-desc">
+                                        50年前，99%的人都在吃有机食品，而现在，中国只有不到万分之一的人在吃有机食品。不是不想吃，而是吃不到。是的，世界上本没有有机食品，农药化肥用多了，食品加工复杂了，有机食品就显得弥足珍贵了。目前，见识过各种骇人听闻的食品安全问题之后，对食品健康有了更科学的认识之后，争取吃有机食品的人越来越多。2016年您总共在有机食品上花费了87345.52元，领先了80%的人，这也意味着，您的身体年龄领先他们一年，继续加油吧，为了健康，为了更美好的生活！
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="charts-area">
+                                        <canvas id="ratio"></canvas>
+                                    </div>
+                                    <p class="charts-desc">
+                                        2016年您消费的有机农产品较2015年稳定增加，这意味着您又向健康迈进了一大步，继续保持吧！
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="charts-area">
+                                        <canvas id="catalog"></canvas>
+                                    </div>
+                                    <p class="charts-desc">
+                                        您消费的有机蔬菜较少，建议适量增加。一般蔬菜中的矿物质含量，仅占有机蔬菜矿物质含量的1/2—2/3。有机蔬菜的种植是以生态学理论为基础，在种植过程中以一套严密的程序控制种植的每一个环节，使各种蔬菜的物种恢复到原生态下，保存其应有和原有的成份；研究显示有机产品含有较多铁质、镁质、钙质等微量元素及维生素C，而基本不含有重金属及致癌的硝酸盐。
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="account-list-item">
+                    <ul>
+                        <li><h3>订阅周报</h3>
+                            <div class="divider"></div>
+                        </li>
+                        <li><h3>退订周报</h3>
+                            <div class="divider"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--account end-->
+<!--footer start-->
+<footer>
+    <!--additional information start-->
+    <div class="footer-inner">
+        <div class="wrap">
+            <div class="footer-wrap">
+                <div class="footer-item">
+                    <h3>ORGANIC简介</h3>
+                    <div class="divider"></div>
+                    <p>Organic是一家专门从事有机农产品生产、加工、销售的公司，我们本着源于自然、亲近自然的理念，用心培育真正零污染的放心食品。</p>
+                    <ul>
+                        <li><i class="iconfont icon-location">&nbsp;</i>果蔬大道，果蔬市，有机省，中国</li>
+                        <li><i class="iconfont icon-message">&nbsp;</i>www.contact@organic.com</li>
+                        <li><i class="iconfont icon-phone">&nbsp;</i>+86 66666666</li>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <h3>Organic信息</h3>
+                    <div class="divider"></div>
+                    <ul>
+                        <li><a href=""><i class="iconfont icon-right"></i>&nbsp;商店</a></li>
+                        <li><a href=""><i class="iconfont icon-right"></i>&nbsp;畅销品</a></li>
+                        <li><a href=""><i class="iconfont icon-right"></i>&nbsp;博客</a></li>
+                        <li><a href=""><i class="iconfont icon-right"></i>&nbsp;新产品</a></li>
+                        <li><a href=""><i class="iconfont icon-right"></i>&nbsp;放心购</a></li>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <h3>个人中心</h3>
+                    <div class="divider"></div>
+                    <ul>
+                        <li><a href=""><i class="iconfont icon-right"></i>&nbsp;账户信息</a></li>
+                        <li><a href=""><i class="iconfont icon-right"></i>&nbsp;地址簿</a></li>
+                        <li><a href=""><i class="iconfont icon-right"></i>&nbsp;历史订单</a></li>
+                        <li><a href=""><i class="iconfont icon-right"></i>&nbsp;退货申请</a></li>
+                        <li><a href=""><i class="iconfont icon-right"></i>&nbsp;报刊</a></li>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <h3>产品图片</h3>
+                    <div class="divider"></div>
+                    <div class="footer-item-pic">
+                        <a href=""><img src="../img/products/small-1.jpg" alt=""></a>
+                        <a href=""><img src="../img/products/small-2.jpg" alt=""></a>
+                        <a href=""><img src="../img/products/small-3.jpg" alt=""></a>
+                        <a href=""><img src="../img/products/small-4.jpg" alt=""></a>
+                        <a href=""><img src="../img/products/small-5.jpg" alt=""></a>
+                        <a href=""><img src="../img/products/small-6.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--additional information end-->
+    <!--copyright start-->
+    <div class="copyright">
+        <div class="pattern">
+            <a class="iconfont icon-up animation" href="javascript:void(0);"></a>
+        </div>
+        <div class="wrap">
+            <div class="copyright-content">
+            <span>
+                Copyright &copy; 2000-2017 Dreamstime. All rights reserved.
+            </span>
+                <span>
+                <a class="iconfont icon-facebook" href=""></a>
+                <a class="iconfont icon-twitter" href=""></a>
+                <a class="iconfont icon-pinterest" href=""></a>
+                <a class="iconfont icon-qq" href=""></a>
+                <a class="iconfont icon-wechat" href=""></a>
+            </span>
+            </div>
+        </div>
+    </div>
+    <!--copyright end-->
+</footer>
+<!--footer end-->
+<!--to top start-->
+<a class="toTop iconfont icon-up" href="javascript:void(0);"></a>
+<!--to top end-->
+<script src="../js/public/jquery3.2.1.min.js"></script>
+<script src="../js/public/Chart.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/account.js"></script>
+<script type="text/javascript">
+    $youziku.load("body", "faf7831eedaf4af28c899bd934d7466e", "HiraginoGBW3");
+    $youziku.draw();
+</script>
+</body>
+</html>

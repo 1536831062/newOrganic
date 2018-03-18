@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Organic-结算中心</title>
+    <link rel="icon" href="../img/logo/logo-2.png">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js?"></script>
+</head>
+<body ng-app="cart">
+<!--header start-->
+<header>
+    <div class="wrap">
+        <div class="header-inner">
+            <div class="logo"><a href="index.html"><img src="../img/logo-icon.png" alt="LOGO">organic</a></div>
+            <ul class="nav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="detail.html">商品详情</a></li>
+                <li><a href="news.html">新闻</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+                <li><a href="sign.html">登录/注册</a></li>
+                <li><a href="account.html">个人中心</a></li>
+                <li class="mycart">
+                    <a  class="iconfont icon-cart active" href="cart.html"></a>
+                    <ul class="mycart-popup">
+                        <li>
+                            <img src="../img/cart/cart-sm-1.jpg" alt="干果">
+                            <div class="mycart-desc">
+                                <h4>杏仁</h4>
+                                <small>干果</small>
+                                <p class="price">
+                                    <strong class="price-current">$50.00</strong>
+                                    <del>$65.00</del>
+                                </p>
+                            </div>
+                            <i class="iconfont icon-close"></i>
+                        </li>
+                        <li>
+                            <img src="../img/cart/cart-sm-2.jpg" alt="干果">
+                            <div class="mycart-desc">
+                                <h4>甜椒</h4>
+                                <small>蔬菜</small>
+                                <p class="price">
+                                    <strong class="price-current">$50.00</strong>
+                                    <del>$65.00</del>
+                                </p>
+                            </div>
+                            <i class="iconfont icon-close"></i>
+                        </li>
+                        <li>
+                            <img src="../img/cart/cart-sm-3.jpg" alt="干果">
+                            <div class="mycart-desc">
+                                <h4>洋葱</h4>
+                                <small>蔬菜</small>
+                                <p class="price">
+                                    <strong class="price-current">$50.00</strong>
+                                    <del>$65.00</del>
+                                </p>
+                            </div>
+                            <i class="iconfont icon-close"></i>
+                        </li>
+                        <li class="subtotal">
+                            <strong>小计</strong>
+                            <strong class="price-current"></strong>
+                        </li>
+                        <li class="btns">
+                            <a class="btn btn-cyan" href="cart.html">详情</a>
+                            <a class="btn btn-blue" href="cart.html">结账</a></li>
+                    </ul>
+                    <span class="badge">3</span>
+                </li>
+                <li class="gallery">
+                    <a class="iconfont icon-collapse" href="javascript:void(0);"></a>
+                    <div class="gallery-container">
+                        <div class="gallery-wrap">
+                            <div class="gallery-item">
+                                <div class="gallery-item-desc">
+                                    <h3>鲜活水果</h3>
+                                    <div class="divider"></div>
+                                    <ul>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>香蕉</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>西瓜</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>黑莓</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>脐橙</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>柠檬</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>苹果</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>菠萝</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>猕猴桃</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>水蜜桃</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>葡萄</a>
+                                        </li>
+                                    </ul>
+                                    <a class="green" href=""><strong>查看所有水果</strong></a>
+                                </div>
+                                <div class="gallery-item-pic">
+                                    <img src="../img/extra/menu-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-item-desc">
+                                    <h3>新鲜蔬菜</h3>
+                                    <div class="divider"></div>
+                                    <ul>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>卷心菜</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>大蒜</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>洋葱</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>莴笋</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>胡萝卜</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>辣椒</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>蘑菇</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>马铃薯</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>玉米</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>大白菜</a>
+                                        </li>
+                                    </ul>
+                                    <a class="green" href=""><strong>查看所有蔬菜</strong></a>
+                                </div>
+                                <div class="gallery-item-pic">
+                                    <img src="../img/extra/menu-2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-item-desc">
+                                    <h3>营养果汁</h3>
+                                    <div class="divider"></div>
+                                    <ul>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>香蕉汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>西瓜汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>黑莓汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>橙汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>苹果汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>柠檬汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>菠萝汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>甘蔗汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>葡萄汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>水蜜桃</a>
+                                        </li>
+                                    </ul>
+                                    <a class="green" href=""><strong>查看所有营养果汁</strong></a>
+                                </div>
+                                <div class="gallery-item-pic">
+                                    <img src="../img/extra/menu-3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-item-desc">
+                                    <h3>鲜榨果汁</h3>
+                                    <div class="divider"></div>
+                                    <ul>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>香蕉汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>西瓜汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>黑莓汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>橙汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>苹果汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>柠檬汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>菠萝汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>甘蔗汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>葡萄汁</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>水蜜桃</a>
+                                        </li>
+                                    </ul>
+                                    <a class="green" href=""><strong>查看所有鲜榨果汁</strong></a>
+                                </div>
+                                <div class="gallery-item-pic">
+                                    <img src="../img/extra/menu-3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-item-desc">
+                                    <h3>新鲜面包</h3>
+                                    <div class="divider"></div>
+                                    <ul>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>香蕉派</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>西瓜甜圈</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>黑莓派</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>橙味面包</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>苹果派</a>
+                                        </li>
+                                        <li><a href=""><i
+                                                class="iconfont icon-right">&nbsp;</i>柠檬味牛角面包</a></li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>菠萝派</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>甘蔗面包</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>葡萄吐司</a>
+                                        </li>
+                                        <li><a href=""><i
+                                                class="iconfont icon-right">&nbsp;</i>水蜜桃味羊角面包</a></li>
+                                    </ul>
+                                    <a class="green" href=""><strong>查看所有新鲜面包</strong></a>
+                                </div>
+                                <div class="gallery-item-pic">
+                                    <img src="../img/extra/menu-5.png" alt="">
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-item-desc">
+                                    <h3>翠绿新茶</h3>
+                                    <div class="divider"></div>
+                                    <ul>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>香蕉派</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>西瓜甜圈</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>黑莓派</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>橙味面包</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>苹果派</a>
+                                        </li>
+                                        <li><a href=""><i
+                                                class="iconfont icon-right">&nbsp;</i>柠檬味牛角面包</a></li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>菠萝派</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>甘蔗面包</a>
+                                        </li>
+                                        <li><a href=""><i class="iconfont icon-right">&nbsp;</i>葡萄吐司</a>
+                                        </li>
+                                        <li><a href=""><i
+                                                class="iconfont icon-right">&nbsp;</i>水蜜桃味羊角面包</a></li>
+                                    </ul>
+                                    <a class="green" href=""><strong>查看所有翠绿新茶</strong></a>
+                                </div>
+                                <div class="gallery-item-pic">
+                                    <img src="../img/extra/menu-6.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <i class="iconfont icon-close"></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!--header end-->
+<!--hero start-->
+<div class="hero">
+    <div class="wrap">
+        <h2>结算中心</h2>
+    </div>
+</div>
+<!--hero end-->
+<!--detail start-->
+<div class="cart" ng-controller="cartCtrl">
+    <div class="wrap">
+        <ul class="cart-nav">
+            <li><span>01</span>
+                <p>我的购物车</p></li>
+            <li><span>02</span>
+                <p>填写核对订单信息</p></li>
+            <li><span>03</span>
+                <p>成功提交订单</p></li>
+        </ul>
+        <div class="divider-dashed"></div>
+        <div class="procedure">
+            <div class="procedure-item" ng-show="step1">
+                <table cellspacing="0" cellpadding="10">
+                    <thead>
+                    <tr>
+                        <th>
+                            <input type="checkbox" id="check-all-1" ng-model="checkAll"
+                                   ng-click="selectAll()">&nbsp;<label
+                                for="check-all-1">全选</label>
+                        </th>
+                        <th>商品</th>
+                        <th>单价</th>
+                        <th>数量</th>
+                        <th>小计</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="product in products">
+                        <td>
+                            <label for=""><input type="checkbox" ng-model="product.chose"
+                                                 ng-click="selectSingle()"></label>
+                        </td>
+                        <td class="td-product">
+                            <div class="product">
+                                <div class="product-img">
+                                    <img src="{{ product.img }}" alt="">
+                                </div>
+                                <div class="product-content">
+                                    <h4>{{ product.title }}</h4>
+                                    <p>{{ product.desc }}</p>
+                                </div>
+                                <div class="product-spec">
+                                    <p>单位：<span>{{ product.unit }}</span></p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>{{ product.price |currency }}</td>
+                        <td class="td-count">
+                            <div class="count-control">
+                                <button ng-click="subtract($index)" class="iconfont icon-subtract"
+                                        type="button"></button>
+                                <label for=""><input ng-model="product.count" class="count" type="text"></label>
+                                <button ng-click="add($index)" class="iconfont icon-add" type="button"></button>
+                            </div>
+                        </td>
+                        <td><strong class="price-current">{{ (product.price*product.count)|currency }}</strong></td>
+                        <td>
+                            <button ng-click="delete($index)" class="iconfont icon-closecircled"></button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="cart-foot">
+                    <div class="cart-foot-left">
+                        <input type="checkbox" id="check-all-2" ng-model="checkAll"
+                               ng-click="selectAll()">&nbsp;<label for="check-all-2">全选</label>
+                        <button type="button" ng-click="deleteChecked()">删除所选</button>
+                    </div>
+                    <div class="cart-foot-right">
+                        <span>合计：<strong class="price-current">{{ total|currency }}</strong></span>
+                        <button ng-click="toStep2()" class="btn btn-green">去结算</button>
+                    </div>
+                </div>
+            </div>
+            <div class="procedure-item" ng-show="step2">
+                <div class="shipping">
+                    <h3>收货信息</h3>
+                    <div class="shipping-location">
+                        <div class="location-card" ng-repeat="address in addressBook"
+                             ng-class="{'active':addressChecked===$index}" ng-click="checkAddress($index)">
+                            <ul>
+                                <li>收货人：{{ address.name }}</li>
+                                <li>所在地区：{{ address.area }}</li>
+                                <li>地址：{{ address.address }}</li>
+                                <li>手机：{{ address.phone }}</li>
+                                <li>邮箱：{{ address.email }}</li>
+                            </ul>
+                            <div class="location-card-tool">
+                                <a href="javascript:void(0);" class="iconfont"
+                                   ng-class="addressChecked===$index?'icon-box-checked':'icon-box'"></a>
+                                <a href="javascript:void(0);" class="iconfont icon-edit"
+                                   ng-click="editHandler($index)"></a>
+                                <a href="javascript:void(0);" class="iconfont icon-close"
+                                   ng-click="deleteAddress($index)"></a>
+                            </div>
+                        </div>
+                        <div class="location-add">
+                            <a href="javascript:void(0);" ng-click="editHandler()"><i
+                                    class="iconfont icon-add">&nbsp;</i>新增地址</a>
+                        </div>
+                    </div>
+                    <form action="" ng-show="editPanel">
+                        <h4>编辑收货信息</h4>
+                        <ul>
+                            <li>
+                                <label for="name"><strong>收货人：</strong></label>
+                                <input type="text" id="name" ng-model="addressEdit.name"></li>
+                            <li>
+                                <label for="area"><strong>所在地区：</strong></label>
+                                <input type="text" id="area" ng-model="addressEdit.area"></li>
+                            <li>
+                                <label for="address"><strong>地址：</strong></label>
+                                <input type="text" id="address" ng-model="addressEdit.address">
+                            </li>
+                            <li>
+                                <label for="phone"><strong>手机：</strong></label>
+                                <input type="text" id="phone" ng-model="addressEdit.phone"></li>
+                            <li>
+                                <label for="email"><strong>邮箱：</strong></label>
+                                <input type="text" id="email" ng-model="addressEdit.email"></li>
+                        </ul>
+                        <button class="btn btn-green" type="button" ng-click="saveAddress()">保存</button>
+                    </form>
+                    <div class="divider-dashed"></div>
+                    <h3>支付方式</h3>
+                    <div class="payment">
+                        <div class="payment-methods" ng-repeat="method in paymentMethods"
+                             ng-class="{'active':paymentChecked===$index}" ng-click="checkPayment($index)">
+                            <i class="iconfont {{ method.icon }}">&nbsp;</i>{{ method.way }}
+                        </div>
+                        <div class="payment-methods">
+                            <i class="iconfont icon-add">&nbsp;</i>更多方式
+                        </div>
+                    </div>
+                    <div class="divider-dashed"></div>
+                    <h3>商品信息</h3>
+                    <table cellspacing="0" cellpadding="10">
+                        <thead>
+                        <tr>
+                            <th>商品</th>
+                            <th>单价</th>
+                            <th>数量</th>
+                            <th>小计</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="item in orders">
+                            <td class="td-product">
+                                <div class="product">
+                                    <div class="product-img">
+                                        <img src="{{ item.img }}" alt="">
+                                    </div>
+                                    <div class="product-content">
+                                        <h4>{{ item.title }}</h4>
+                                        <p>{{ item.desc }}</p>
+                                    </div>
+                                    <div class="product-spec">
+                                        <p>单位：<span>{{ item.unit }}</span></p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>{{ item.price |currency }}</td>
+                            <td class="td-count">
+                                {{ item.count }}
+                            </td>
+                            <td><strong class="price-current">{{ (item.price*item.count)|currency }}</strong>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="cart-foot">
+                    <span>合计：<strong class="price-current">{{ total|currency }}</strong></span>
+                    <button class="btn btn-green" ng-click="toStep3()">确认提交</button>
+                </div>
+            </div>
+            <div class="procedure-item" ng-show="step3">
+                <div class="done">
+                    <img src="../img/check2.jpg" alt="">
+                    <h2>包裹已整装待发，请耐心等待！</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--detail end-->
+<!--footer start-->
+<footer>
+    <!--additional information start-->
+    <div class="footer-inner">
+        <div class="wrap">
+            <div class="footer-wrap">
+                <div class="footer-item">
+                    <h3>ORGANIC简介</h3>
+                    <div class="divider"></div>
+                    <p>Organic是一家专门从事有机农产品生产、加工、销售的公司，我们本着源于自然、亲近自然的理念，用心培育真正零污染的放心食品。</p>
+                    <ul>
+                        <li><i class="iconfont icon-location">&nbsp;</i>果蔬大道，果蔬市，有机省，中国</li>
+                        <li><i class="iconfont icon-message">&nbsp;</i>www.contact@organic.com</li>
+                        <li><i class="iconfont icon-phone">&nbsp;</i>+86 66666666</li>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <h3>Organic信息</h3>
+                    <div class="divider"></div>
+                    <ul>
+                        <li><a href=""><i class="iconfont icon-right"></i>&nbsp;商店</a></li>
+                        <li><a href=""><i class="iconfont icon-right"></i>&nbsp;畅销品</a></li>
+                        <li><a href=""><i class="iconfont icon-right"></i>&nbsp;博客</a></li>
+                        <li><a href=""><i class="iconfont icon-right"></i>&nbsp;新产品</a></li>
+                        <li><a href=""><i class="iconfont icon-right"></i>&nbsp;放心购</a></li>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <h3>个人中心</h3>
+                    <div class="divider"></div>
+                    <ul>
+                        <li><a href=""><i class="iconfont icon-right"></i>&nbsp;账户信息</a></li>
+                        <li><a href=""><i class="iconfont icon-right"></i>&nbsp;地址簿</a></li>
+                        <li><a href=""><i class="iconfont icon-right"></i>&nbsp;历史订单</a></li>
+                        <li><a href=""><i class="iconfont icon-right"></i>&nbsp;退货申请</a></li>
+                        <li><a href=""><i class="iconfont icon-right"></i>&nbsp;报刊</a></li>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <h3>产品图片</h3>
+                    <div class="divider"></div>
+                    <div class="footer-item-pic">
+                        <a href=""><img src="../img/products/small-1.jpg" alt=""></a>
+                        <a href=""><img src="../img/products/small-2.jpg" alt=""></a>
+                        <a href=""><img src="../img/products/small-3.jpg" alt=""></a>
+                        <a href=""><img src="../img/products/small-4.jpg" alt=""></a>
+                        <a href=""><img src="../img/products/small-5.jpg" alt=""></a>
+                        <a href=""><img src="../img/products/small-6.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--additional information end-->
+    <!--copyright start-->
+    <div class="copyright">
+        <div class="pattern">
+            <a class="iconfont icon-up animation" href="javascript:void(0);"></a>
+        </div>
+        <div class="wrap">
+            <div class="copyright-content">
+            <span>
+                Copyright &copy; 2000-2017 Dreamstime. All rights reserved.
+            </span>
+                <span>
+                <a class="iconfont icon-facebook" href=""></a>
+                <a class="iconfont icon-twitter" href=""></a>
+                <a class="iconfont icon-pinterest" href=""></a>
+                <a class="iconfont icon-qq" href=""></a>
+                <a class="iconfont icon-wechat" href=""></a>
+            </span>
+            </div>
+        </div>
+    </div>
+    <!--copyright end-->
+</footer>
+<!--footer end-->
+<script src="../js/public/angular1.6.4.min.js"></script>
+<script src="../js/public/jquery3.2.1.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/cart.js"></script>
+<script type="text/javascript">
+    $youziku.load("body", "faf7831eedaf4af28c899bd934d7466e", "HiraginoGBW3");
+    $youziku.draw();
+</script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+@import "variables";
+@import "common";
+
+//cart-nav
+.cart-nav {
+  @extend %flex;
+  @extend %position-relative;
+  &:before {
+    @extend %bg-green;
+    @extend %display-block;
+    @extend %position-absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    top: 35%;
+    z-index: -1;
+  }
+  li {
+    @extend %green;
+    @extend %font-bold;
+    @extend %text-center;
+    width: 33.3333%;
+    span {
+      @extend %bg-green;
+      @extend %display-inline-block;
+      @extend %font-size-20;
+      @extend %white;
+      padding: 10px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.procedure {
+  @extend %overflow-hidden;
+  width: 100%;
+}
+
+.procedure-item {
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
+//cart
+.cart {
+  @extend %pd-both;
+}
+
+table {
+  width: 100%;
+  padding-top: 20px;
+  td {
+    @extend %text-center;
+    border: solid 1px #7fba00;
+
+  }
+  thead {
+    @extend %bg-green;
+    tr {
+      color: #000;
+      height: 40px;
+    }
+    th {
+      &:first-child {
+        @extend %text-left;
+        padding-left: 20px;
+      }
+    }
+  }
+  tbody {
+    tr {
+      &:nth-child(even) {
+        @extend %bg-gray;
+      }
+    }
+    td {
+      &:first-child {
+        @extend %text-left;
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+.td-product {
+  width: 50%;
+}
+
+.td-count {
+  width: 13%;
+  padding: 0 5px;
+}
+
+.product {
+  @extend %align-start;
+  @extend %flex;
+  @extend %flex-start;
+  @extend %text-left;
+}
+
+.product-img, .product-content, .product-spec {
+  @extend %display-table-cell;
+  vertical-align: top;
+}
+
+.product-content {
+  padding-left: 20px;
+  width: 60%;
+}
+
+.cart-foot {
+  @extend %align-center;
+  @extend %flex;
+  @extend %space-between;
+  @extend %bg-gray;
+  height: 40px;
+  padding: 20px;
+}
+
+//shipping
+.shipping {
+  h3 {
+    padding: 10px 0;
+  }
+  form {
+    @extend %bg-gray;
+    padding: 20px;
+    ul {
+      padding: 10px 0;
+    }
+    li {
+      padding: 5px 0;
+      strong {
+        @extend %display-inline-block;
+        @extend %text-right;
+        width: 8%;
+      }
+    }
+    input {
+      border-bottom: solid 1px #A3A3A3;
+    }
+  }
+}
+
+.shipping-location {
+  @extend %flex;
+  @extend %flex-start;
+  @extend %flex-wrap;
+}
+
+.location-card {
+  width: 20%;
+  &.active {
+    border-color: #7fba00;
+  }
+}
+
+.location-add {
+  @extend %align-center;
+  @extend %border;
+  @extend %border-radius-5;
+  @extend %flex;
+  @extend %justify-center;
+  width: 20%;
+  height: 172px;
+}
+
+//payment
+.payment {
+  @extend %flex;
+  @extend %flex-start;
+}
+
+.payment-methods {
+  @extend %cursor;
+  padding: 5px;
+  border: solid 1px #9f9f9f;
+  margin: 0 12px 12px 0;
+  .iconfont {
+    @extend %font-size-18;
+  }
+  &.active {
+    @extend %bg-green;
+    @extend %white;
+    border-color: #7fba00;
+  }
+}
+
+//done
+.done {
+  @extend %text-center;
+  margin-top: 30px;
+  img {
+    width: 30%;
+    height: auto;
+  }
+}
